@@ -1,0 +1,79 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin-top: 3%;
+    height: 100%;
+    background-color: grey;
+    display: flex;
+}
+
+.Vende-spil{
+    width: 640px;
+    height: 640px;
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+
+.Vende-kort{
+    margin: 5px;
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+.Vende-kort:active {
+    transform: scale(.97);
+    transition: transform .2s;
+}
+
+.Vende-kort.vend {
+    transform: rotateY(180deg);
+}
+
+.forside-kort, .bagside-kort{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    backface-visibility: hidden
+}
+
+.forside-kort {
+    transform: rotateY(180deg);
+}
+
+h1{
+    color: white;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 15%;
+    top: 7%;
+    
+}
+
+#h1:hover {
+    color: aquamarine;
+}
+
+.tilbage {
+    position: absolute;
+    right: 76%;
+}
+
+.nummertæller{
+    position: absolute;
+    right: 15%;
+    top: 13%;
+}

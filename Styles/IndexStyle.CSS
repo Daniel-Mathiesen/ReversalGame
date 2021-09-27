@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: grey;
+}
+
+h1,
+h2 {
+  color: white;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 4rem;
+  position: relative;
+  left: 16.5%;
+  position: absolute;
+  top: 10%;
+}
+
+h2 {
+  font-size: 2.5rem;
+  position: relative;
+  left: 19%;
+  position: absolute;
+  top: 23%;
+}
+
+.kort12 {
+  font-family: sans-serif;
+  font-size: 4rem;
+  color: white;
+  background: green;
+  border-radius: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  position: absolute;
+  left: 15%;
+  top: 50%;
+}
+
+.kort24 {
+  font-family: sans-serif;
+  font-size: 4rem;
+  color: white;
+  background: green;
+  border-radius: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  position: absolute;
+  left: 43%;
+  top: 50%;
+}
+
+.kort48 {
+  font-family: sans-serif;
+  font-size: 4rem;
+  color: white;
+  background: green;
+  border-radius: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  position: absolute;
+  left: 71%;
+  top: 50%;
+}
+
+.title1 {
+  position: absolute;
+  top: 39%;  
+  left: 40%;
+}
