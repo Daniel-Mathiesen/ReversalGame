@@ -5,17 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vendespillet - Forside</title>
+    <link rel="stylesheet" href="Styles/resets.css">
     <link rel="stylesheet" href="Styles/IndexStyle.CSS" />
   </head>
   <body>
-    <audio src="Musik/FreddyScreen.mp3" id="TitleScreen" loop="loop"></audio>
-    <h1 id="welcome">Velkomme til vendespillet</h1>
-    <h2>Tryk for at vælge hvor mange kort du vil spille med</h2>
-
-    <h2 class="title1">HTML Vendespil</h2>
-    <a href="Kortspil12.HTML"><button class="kort12">12 kort</button></a>
-    <a href="Kortspil12.HTML"><button class="kort24">24 kort</button></a>
-    <a href="Kortspil12.HTML"><button class="kort48">48 kort</button></a>
-    <script src="JavaScipts/KundeNavnSamler.JS"></script>
+    <!-- <audio src="Musik/FreddyScreen.mp3" id="TitleScreen" loop="loop"></audio> -->
+    <div id="blackout"></div>
+    <div class="main__container">
+      <div class="left">
+        <div class="headerText">
+          <h1 id="welcome">Velkommen til nissernes vendespil</h1>
+        </div>
+        <div class="header2Text">
+          <h2>Tryk for at vælge hvor mange kort du vil spille med</h2>
+        </div>
+      </div>
+      <div class="right">
+      </div>
+      <div class="button_container">
+        <a href="Kortspil6.HTML"><button class="kort">6 kort</button></a>
+        <a href="Kortspil12.HTML"><button class="kort">12 kort</button></a>
+        <a href="Kortspil24.HTML"><button class="kort">18 kort</button></a>
+      </div>
+    </div>
+    
+    <!-- <script src="JavaScipts/KundeNavnSamler.JS"></script> -->
   </body>
 </html>

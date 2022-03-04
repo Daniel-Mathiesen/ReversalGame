@@ -6,79 +6,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vendespillet - 12 kort</title>
+    <link rel="stylesheet" href="Styles/resets.css">
     <link rel="stylesheet" href="Styles/Vendespil12.CSS">
     
     
 </head>
 <body>
     <audio src="Musik/FreddyAddWater.mp3" id="addwater" loop="loop"></audio>
-
-    <h1 class="nummertæller">Antal tryk <span id="displayCount">0</span></h1>
-    <section class="Vende-spil">
-        <div class="Vende-kort" data-samler="section" value="Count" id="countButton1">
-            <img class="forside-kort" src="KortBilledere/VendeSpilSection.png" alt="">
-            <img class="bagside-kort" src="KortBilledere/VendeSpilBagside.png" alt="">
+    <div id="blackout">
+        <div id="blackout_text">
+            <p>Vend skærmen vandret for at spille</p>
         </div>
-
-        <div class="Vende-kort" data-samler="section" value="Count" id="countButton2">
-            <img class="forside-kort" src="KortBilledere/VendeSpilSection.png" alt="">
-            <img class="bagside-kort" src="KortBilledere/VendeSpilBagside.png" alt="">
+    </div>
+        <div class="game__container" id="screen">
+            <div class="button__container">
+                <h1 class="nummertæller">Antal tryk <span id="displayCount">0</span></h1>
+                <a href=""><h1 id="h1" onClick="window.location.href=window.location.href">Spil igen?</h1></a>
+                <a href="Index.HTML"><h1 id="h1" class="tilbage">Tilbage</h1></a>
+            </div>
+            <section class="Vende-spil">
+                <div name="kort" class="Vende-kort" data-samler="section" value="Count" id="countButton1">
+                    <img class="forside-kort" src="KortBilledere/VendeSpilSection.png" alt="">
+                    <img class="bagside-kort" src="KortBilledere/VendeSpilBagside.png" alt="">
+                </div>
+        
+                <div name="kort" class="Vende-kort" data-samler="section" value="Count" id="countButton2">
+                    <img class="forside-kort" src="KortBilledere/VendeSpilSection.png" alt="">
+                    <img class="bagside-kort" src="KortBilledere/VendeSpilBagside.png" alt="">
+                </div>
+        
+                <div name="kort" class="Vende-kort" data-samler="header"  value="Count" id="countButton3">
+                    <img class="forside-kort" src="KortBilledere/VendeSpilHeader.png" alt="">
+                    <img class="bagside-kort" src="KortBilledere/VendeSpilBagside.png" alt="">
+                </div>
+        
+                <div name="kort" class="Vende-kort" data-samler="header"  value="Count" id="countButton4">
+                    <img class="forside-kort" src="KortBilledere/VendeSpilHeader.png" alt="">
+                    <img class="bagside-kort" src="KortBilledere/VendeSpilBagside.png" alt="">
+                </div>
+        
+                <div name="kort" class="Vende-kort" data-samler="article"  value="Count" id="countButton5">
+                    <img class="forside-kort" src="KortBilledere/VendeSpilArticle.png" alt="">
+                    <img class="bagside-kort" src="KortBilledere/VendeSpilBagside.png" alt="">
+                </div>
+        
+                <div name="kort" class="Vende-kort" data-samler="article" value="Count" id="countButton6">
+                    <img class="forside-kort" src="KortBilledere/VendeSpilArticle.png" alt="">
+                    <img class="bagside-kort" src="KortBilledere/VendeSpilBagside.png" alt="">
+                </div>
+        
+                <div name="kort" class="Vende-kort" data-samler="body" value="Count" id="countButton7">
+                    <img class="forside-kort" src="KortBilledere/VendeSpilBody.png" alt="">
+                    <img class="bagside-kort" src="KortBilledere/VendeSpilBagside.png" alt="">
+                </div>
+        
+                <div name="kort" class="Vende-kort" data-samler="body" value="Count" id="countButton8">
+                    <img class="forside-kort" src="KortBilledere/VendeSpilBody.png" alt="">
+                    <img class="bagside-kort" src="KortBilledere/VendeSpilBagside.png" alt="">
+                </div>
+        
+                <div name="kort" class="Vende-kort" data-samler="footer" value="Count" id="countButton9">
+                    <img class="forside-kort" src="KortBilledere/VendeSpilFooter.png" alt="">
+                    <img class="bagside-kort" src="KortBilledere/VendeSpilBagside.png" alt="">
+                </div>
+        
+                <div name="kort" class="Vende-kort" data-samler="footer" value="Count" id="countButton10">
+                    <img class="forside-kort" src="KortBilledere/VendeSpilFooter.png" alt="">
+                    <img class="bagside-kort" src="KortBilledere/VendeSpilBagside.png" alt="">
+                </div>
+        
+                <div name="kort" class="Vende-kort" data-samler="html" value="Count" id="countButton11">
+                    <img class="forside-kort" src="KortBilledere/VendeSpilHTML.png" alt="">
+                    <img class="bagside-kort" src="KortBilledere/VendeSpilBagside.png" alt="">
+                </div>
+        
+                <div name="kort" class="Vende-kort" data-samler="html" value="Count" id="countButton12">
+                    <img class="forside-kort" src="KortBilledere/VendeSpilHTML.png" alt="">
+                    <img class="bagside-kort" src="KortBilledere/VendeSpilBagside.png" alt="">
+                </div>
+            </section>
         </div>
-
-        <div class="Vende-kort" data-samler="header"  value="Count" id="countButton3">
-            <img class="forside-kort" src="KortBilledere/VendeSpilHeader.png" alt="">
-            <img class="bagside-kort" src="KortBilledere/VendeSpilBagside.png" alt="">
-        </div>
-
-        <div class="Vende-kort" data-samler="header"  value="Count" id="countButton4">
-            <img class="forside-kort" src="KortBilledere/VendeSpilHeader.png" alt="">
-            <img class="bagside-kort" src="KortBilledere/VendeSpilBagside.png" alt="">
-        </div>
-
-        <div class="Vende-kort" data-samler="article"  value="Count" id="countButton5">
-            <img class="forside-kort" src="KortBilledere/VendeSpilArticle.png" alt="">
-            <img class="bagside-kort" src="KortBilledere/VendeSpilBagside.png" alt="">
-        </div>
-
-        <div class="Vende-kort" data-samler="article" value="Count" id="countButton6">
-            <img class="forside-kort" src="KortBilledere/VendeSpilArticle.png" alt="">
-            <img class="bagside-kort" src="KortBilledere/VendeSpilBagside.png" alt="">
-        </div>
-
-        <div class="Vende-kort" data-samler="body" value="Count" id="countButton7">
-            <img class="forside-kort" src="KortBilledere/VendeSpilBody.png" alt="">
-            <img class="bagside-kort" src="KortBilledere/VendeSpilBagside.png" alt="">
-        </div>
-
-        <div class="Vende-kort" data-samler="body" value="Count" id="countButton8">
-            <img class="forside-kort" src="KortBilledere/VendeSpilBody.png" alt="">
-            <img class="bagside-kort" src="KortBilledere/VendeSpilBagside.png" alt="">
-        </div>
-
-        <div class="Vende-kort" data-samler="footer" value="Count" id="countButton9">
-            <img class="forside-kort" src="KortBilledere/VendeSpilFooter.png" alt="">
-            <img class="bagside-kort" src="KortBilledere/VendeSpilBagside.png" alt="">
-        </div>
-
-        <div class="Vende-kort" data-samler="footer" value="Count" id="countButton10">
-            <img class="forside-kort" src="KortBilledere/VendeSpilFooter.png" alt="">
-            <img class="bagside-kort" src="KortBilledere/VendeSpilBagside.png" alt="">
-        </div>
-
-        <div class="Vende-kort" data-samler="html" value="Count" id="countButton11">
-            <img class="forside-kort" src="KortBilledere/VendeSpilHTML.png" alt="">
-            <img class="bagside-kort" src="KortBilledere/VendeSpilBagside.png" alt="">
-        </div>
-
-        <div class="Vende-kort" data-samler="html" value="Count" id="countButton12">
-            <img class="forside-kort" src="KortBilledere/VendeSpilHTML.png" alt="">
-            <img class="bagside-kort" src="KortBilledere/VendeSpilBagside.png" alt="">
-        </div>
-    </section>
-    <a href=""><h1 id="h1" onClick="window.location.href=window.location.href">Spil igen?</h1></a>
-    <a href="KortVælgSpil.HTML"><h1 id="h1" class="tilbage">Tilbage</h1></a>
+        <script src="JavaScipts/AntalTrykTællerKort12.JS"></script>
     <script src="JavaScipts/SpilFunktion12.JS"></script>
-    <script src="JavaScipts/AntalTrykTællerKort12.JS"></script>
 </body>
 
 </html>

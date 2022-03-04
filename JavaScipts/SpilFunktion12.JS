@@ -2,7 +2,7 @@ const kort = document.querySelectorAll('.Vende-kort');
 
 let harVendtKort = false
 let LåsBord = false;
-let førsteKort, AndetKor
+let førsteKort, AndetKort
 
 window.onload= function(MusikSpiller){
     document.getElementById("addwater").play(); 
@@ -41,8 +41,8 @@ function tjekForSpil() {
 function deaktiverKort () {
     førsteKort.removeEventListener('click', vendKort);
     AndetKort.removeEventListener('click',  vendKort);
-    førsteKort.style.filters.alpha.opacity=90
-    AndetKort.style.filters.alpha.opacity=90
+    // førsteKort.style.opacity="0.5";
+    // AndetKort.style.opacity="0.5";
     genstartBord()
 }
 

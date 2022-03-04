@@ -1,30 +1,65 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+  user-select: none;
+  box-sizing: border-box;
 }
 
-body {
-    margin-top: 3%;
+#blackout{
+    display: none;
+    z-index: -100000000000000;
+}
+
+html, body{
     height: 100%;
-    background-color: grey;
+    width: 100%;
+    font-size: 1.85vw;
+  }
+
+
+body {
+    height: 100%;
     display: flex;
+}
+
+.game__container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button__container{
+    margin-left: 20px;
+    background-color: #1F2E78;
+    width: 16vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
 }
 
 .Vende-spil{
-    width: 640px;
-    height: 640px;
+    width: 80vw;
+    height: 48vw;
     display: flex;
-    margin: auto;
+    align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     perspective: 1000px;
+    margin-right: 1.5vw;
+    margin-left: 1.5vw;
 }
 
 
 .Vende-kort{
-    margin: 5px;
-    width: calc(25% - 10px);
-    height: calc(33.333% - 10px);
+    margin-right: 5px;
+    margin-left: 5px;
+    width: calc(12vw - 10px);
+    height: calc(20vw - 10px);
     position: relative;
     transform: scale(1);
     transform-style: preserve-3d;
@@ -53,27 +88,74 @@ body {
 }
 
 h1{
-    color: white;
-    font-family: sans-serif;
+    text-shadow: 5px 3px 1px #1C285A;
+    color: #D7B34E;
     margin: 0;
-    padding: 0;
-    position: absolute;
-    right: 15%;
-    top: 7%;
-    
+    padding: 0; 
+    font-size: 1.4rem;
 }
 
 #h1:hover {
-    color: aquamarine;
+    color: #B0891A;
 }
 
 .tilbage {
-    position: absolute;
-    right: 76%;
+padding-top: 20px;
 }
 
-.nummertæller{
-    position: absolute;
-    right: 15%;
-    top: 13%;
+.nummertæller span{
+    color: #D7B34E;
+    font-size: 3rem;
 }
+
+
+a{
+    text-decoration: none;
+}
+
+#blackout_text{
+    display: none;
+}
+
+@media only screen and (orientation : portrait) {
+    body, html{
+        overflow: hidden;
+        background-color: #161615;
+        margin: 0;
+        padding: 0%;
+    }
+
+    #screen *{
+        display: none;
+    }
+    #blackout {
+        background-color: #161615;
+        width: 100vw;
+        height: 100vh;
+        z-index: 100;
+    }
+    #blackout_text{
+        color: white;
+        display: block;
+        position: absolute;
+        font-size: large;
+        top: 40%;
+        left: 10%
+    }
+
+    .button__container{
+        display: none;
+    }
+  }
+
+  @media only screen and (max-width: 900px) and (orientation: landscape) {
+    body, html{
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0%;
+    }
+
+    .button__container{
+        display: hidden;
+    }
+  }
