@@ -10,8 +10,11 @@
   </head>
   <body>
     <!-- <audio src="Musik/FreddyScreen.mp3" id="TitleScreen" loop="loop"></audio> -->
-    <div id="blackout"></div>
-    <div class="main__container">
+    <div id="preloader"></div>
+    <div id="blackout">
+      <p id="blackout_text">Vend skærmen for at spille</p>
+    </div>
+    <div class="main__container hideall" id="main">
       <div class="left">
         <div class="headerText">
           <h1 id="welcome">Velkommen til nissernes vendespil</h1>
@@ -30,5 +33,11 @@
     </div>
     
     <!-- <script src="JavaScipts/KundeNavnSamler.JS"></script> -->
+    <script>
+      window.addEventListener("load", function(){
+        document.getElementById("main").classList.remove("hideall")
+        document.getElementById("preloader").classList.add("hide")
+      })
+    </script>
   </body>
 </html>

@@ -49,7 +49,7 @@ h1,
 h2 {
   font-family: sans-serif;
   color: #D7B34E;
-  text-shadow: 5px 3px 1px #1C285A;
+  text-shadow: 3px 3px 1px #15192b;
 }
 
 h1 {
@@ -60,6 +60,10 @@ h2 {
   font-size: 1.7rem;
   text-align: center;
 
+}
+
+#blackout_text{
+  display: none;
 }
 
 @media only screen and (orientation : portrait) {
