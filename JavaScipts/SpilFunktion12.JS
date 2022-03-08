@@ -1,75 +1,71 @@
-const kort = document.querySelectorAll('.Vende-kort');
+const kort = document.querySelectorAll(".Vende-kort");
 
-let harVendtKort = false
+let harVendtKort = false;
 let LåsBord = false;
-let førsteKort, AndetKort
+let førsteKort, AndetKort;
 
-window.onload= function(MusikSpiller){
-    document.getElementById("addwater").play(); 
-}
-
-function vendKort() {
-    if (LåsBord) return;
-    if (this === førsteKort) return;
-
-    this.classList.add('vend');
-
-    if (!harVendtKort) {
-        //Første Tryk
-        harVendtKort = true
-        førsteKort = this;
-    } else {
-        //Anden Tryk
-        harVendtKort = false;
-        AndetKort = this;  
-        
-        tjekForSpil();
-    }
+window.onload = function (MusikSpiller) {
+  document.getElementById("addwater").play();
 };
 
+function vendKort() {
+  if (LåsBord) return;
+  if (this === førsteKort) return;
+
+  this.classList.add("vend");
+
+  if (!harVendtKort) {
+    //Første Tryk
+    harVendtKort = true;
+    førsteKort = this;
+  } else {
+    //Anden Tryk
+    harVendtKort = false;
+    AndetKort = this;
+
+    tjekForSpil();
+  }
+}
 
 function tjekForSpil() {
-         //Passer kortene
-         if (førsteKort.dataset.samler === 
-            AndetKort.dataset.samler) {
-               deaktiverKort();
-            } else {
-                uvendKort();
-    }
+  //Passer kortene
+  if (førsteKort.dataset.samler === AndetKort.dataset.samler) {
+    deaktiverKort();
+  } else {
+    uvendKort();
+  }
 }
 
-function deaktiverKort () {
-    førsteKort.removeEventListener('click', vendKort);
-    AndetKort.removeEventListener('click',  vendKort);
-    // førsteKort.style.opacity="0.5";
-    // AndetKort.style.opacity="0.5";
-    genstartBord()
+function deaktiverKort() {
+  førsteKort.removeEventListener("click", vendKort);
+  AndetKort.removeEventListener("click", vendKort);
+  // førsteKort.style.opacity="0.5";
+  // AndetKort.style.opacity="0.5";
+  genstartBord();
 }
 
-function uvendKort () {
-    // Kortene passer ikke
-    LåsBord = true; 
+function uvendKort() {
+  // Kortene passer ikke
+  LåsBord = true;
 
-    setTimeout(() => {
-        førsteKort.classList.remove('vend')
-        AndetKort.classList.remove('vend')
+  setTimeout(() => {
+    førsteKort.classList.remove("vend");
+    AndetKort.classList.remove("vend");
 
-        LåsBord = false;
-        }, 1500);
+    LåsBord = false;
+  }, 1500);
 }
 
 function genstartBord() {
-    [harVendtKort, LåsBord] = [false, false];
-    [førsteKort, AndetKort] = [null, null];
+  [harVendtKort, LåsBord] = [false, false];
+  [førsteKort, AndetKort] = [null, null];
 }
 
-(function bland (){
-    kort.forEach(kort =>{
-        let tilfældigPos = Math.floor (Math.random() * 12)
-        kort.style.order = tilfældigPos;
-    });
+(function bland() {
+  kort.forEach((kort) => {
+    let tilfældigPos = Math.floor(Math.random() * 12);
+    kort.style.order = tilfældigPos;
+  });
 })();
 
-
-kort. forEach(kort => kort.addEventListener('click', vendKort));
-
+kort.forEach((kort) => kort.addEventListener("click", vendKort));

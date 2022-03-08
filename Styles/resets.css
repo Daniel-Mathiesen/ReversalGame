@@ -1,40 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap");
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    user-select: none;
-    font-family: 'Finger Paint', cursive !important; 
-    color: #000000;
-  }
-  
-  html, body{
-    height: 100%;
-    overflow: hidden;
-    width: 100%;    
-    background-color: #eaeaea;
-    background-image: url(vendekort_bg.png);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+  font-family: "Finger Paint", cursive !important;
+  color: #000000;
+}
 
-  }
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  background-color: #eaeaea;
+  background-image: url(vendekort_bg.png);
+}
 
-  .hideall *{
-    display: none;
-  }
+.hideall * {
+  display: none;
+}
 
-  .hide{
-    display: none;
-  }
+.hide {
+  display: none;
+}
 
-  #preloader{
-    background: #eaeaea url(animation_500_l0ceweu9.gif) no-repeat center center;
-    background-size: 25%;
-    height: 100vh;
-    width: 100%;
-    z-index: 100000000000;
-  }
+#preloader {
+  background: #eaeaea url(animation_500_l0ceweu9.gif) no-repeat center center;
+  background-size: 25%;
+  height: 100vh;
+  width: 100%;
+  z-index: 100000000000;
+}
 
-.sideImage{
+.sideImage {
   width: 107%;
   height: 70%;
   margin: -100px;
