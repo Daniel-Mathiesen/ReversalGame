@@ -1,12 +1,20 @@
 const kort = document.querySelectorAll(".Vende-kort");
 
+const btnCon = document.querySelector(".Vende-spil");
+
 let harVendtKort = false;
 let LåsBord = false;
 let førsteKort, AndetKort;
+let match = 0;
 
-window.onload = function (MusikSpiller) {
-  document.getElementById("addwater").play();
+let winnerContain = document.getElementById("winnerBox");
+
+const TimeWaitFunction = async () => {
+  await delay(5000);
+  console.log("Waited 5s");
 };
+
+const delay = ms => new Promise(res => setTimeout(res, ms));
 
 function vendKort() {
   if (LåsBord) return;
@@ -36,12 +44,30 @@ function tjekForSpil() {
   }
 }
 
-function deaktiverKort() {
+const deaktiverKort = async () => {
   førsteKort.removeEventListener("click", vendKort);
   AndetKort.removeEventListener("click", vendKort);
-  // førsteKort.style.opacity="0.5";
-  // AndetKort.style.opacity="0.5";
+  LåsBord = true;
+  await delay(700);
+  førsteKort.classList.add("match");
+  AndetKort.classList.add("match");
+  await delay(400);
+  førsteKort.classList.add("rotate")
+  AndetKort.classList.add("rotate")
+  await delay(900);
+  førsteKort.classList.add("small")
+  AndetKort.classList.add("small")
+  førsteKort.style.opacity="0.8";
+  AndetKort.style.opacity="0.8";
+  førsteKort.style.filter = "grayscale(70%)";
+  AndetKort.style.filter = "grayscale(70%)";
+  match++;
+  console.log(match);
   genstartBord();
+  if (match === 3) {
+    await delay(1000);
+    winnerContain.style.display = "flex";
+  }
 }
 
 function uvendKort() {

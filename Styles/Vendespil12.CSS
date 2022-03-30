@@ -63,15 +63,37 @@ body {
   transform: scale(1);
   transform-style: preserve-3d;
   transition: transform 0.5s;
+  -webkit-transform: scale(1);
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: transform 0.5s;
 }
 
 .Vende-kort:active {
   transform: scale(0.97);
   transition: transform 0.2s;
+  -webkit-transform: scale(0.97);
+  -webkit-transition: transform 0.2s;
 }
 
 .Vende-kort.vend {
   transform: rotateY(180deg);
+  -webkit-transform-origin-y: 180deg;
+}
+
+.Vende-kort.match {
+  transform: scale(1.25);
+  -webkit-transform: scale(1.25);
+}
+
+.Vende-kort.rotate{
+  
+  transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+}
+
+.Vende-kort.small{
+  transform: rotateY(360deg);
+  -webkit-transform: rotateY(360deg);
 }
 
 .forside-kort,
@@ -85,6 +107,7 @@ body {
 
 .forside-kort {
   transform: rotateY(180deg);
+  -webkit-transform-origin-y: 180deg;
 }
 
 h1 {
