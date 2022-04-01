@@ -5,8 +5,7 @@ const btnCon = document.querySelector(".Vende-spil");
 let harVendtKort = false;
 let LåsBord = false;
 let førsteKort, AndetKort;
-let match = 0;
-var matchDisplay = document.getElementById("displayCountMatch");
+var match = 0;
 var Cards = document.getElementsByClassName("Vende-kort").length / 2;
 
 let winnerContain = document.getElementById("winnerBox");
@@ -59,7 +58,6 @@ const deaktiverKort = async () => {
   match++;
   console.log(match);
   genstartBord();
-  matchDisplay.innerHTML = match;
   if (match === Cards) {
     await delay(1000);
     winnerContain.style.display = "flex";
