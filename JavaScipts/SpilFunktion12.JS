@@ -6,6 +6,8 @@ let harVendtKort = false;
 let LåsBord = false;
 let førsteKort, AndetKort;
 let match = 0;
+var matchDisplay = document.getElementById("displayCountMatch");
+var Cards = document.getElementsByClassName("Vende-kort").length / 2;
 
 let winnerContain = document.getElementById("winnerBox");
 
@@ -54,17 +56,11 @@ const deaktiverKort = async () => {
   await delay(400);
   førsteKort.classList.add("rotate")
   AndetKort.classList.add("rotate")
-  await delay(900);
-  førsteKort.classList.add("small")
-  AndetKort.classList.add("small")
-  førsteKort.style.opacity="0.8";
-  AndetKort.style.opacity="0.8";
-  førsteKort.style.filter = "grayscale(70%)";
-  AndetKort.style.filter = "grayscale(70%)";
   match++;
   console.log(match);
   genstartBord();
-  if (match === 3) {
+  matchDisplay.innerHTML = match;
+  if (match === Cards) {
     await delay(1000);
     winnerContain.style.display = "flex";
   }
@@ -95,3 +91,5 @@ function genstartBord() {
 })();
 
 kort.forEach((kort) => kort.addEventListener("click", vendKort));
+
+// 
