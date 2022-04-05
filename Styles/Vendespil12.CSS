@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   user-select: none;
+  -webkit-user-select: none;
   box-sizing: border-box;
 }
 
@@ -139,7 +140,7 @@ body {
 
 .forside-kort {
   transform: rotateY(180deg);
-  -webkit-transform-origin-y: 180deg;
+  -webkit-transform: rotateY(180deg);
   animation-duration: 0ms;
 }
 
