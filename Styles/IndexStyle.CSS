@@ -44,26 +44,6 @@ body {
   flex-direction: column;
 }
 
-.kort6{
-  position: absolute;
-  right: 8.7rem;
-  width: 25rem;
-  height: 5rem;
-}
-
-.kort12{
-  position: absolute;
-  right: 9.7rem;
-  width: 25rem;
-  height: 5rem;
-}
-
-.kort18{
-  position: absolute;
-  right: 11.3rem;
-  width: 25rem;
-  height: 5rem;
-}
 
 h1,
 h2 {
@@ -79,6 +59,65 @@ h1 {
 h2 {
   font-size: 1.7rem;
   text-align: center;
+}
+
+.popup {
+  animation-name: popup_kf;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+
+}
+
+@keyframes popup_kf {
+  0% {
+
+      transform: translateY(12vw);
+  }
+
+  50% {
+
+      transform: translateY(0);
+  }
+
+  100% {
+
+      transform: translateY(12vw);
+  }
+}
+
+#saga{
+  width: 20rem; 
+  height: 20rem; 
+  position: absolute; 
+  bottom: -10rem; 
+  display: none;
+}
+
+#sigurd{
+  width: 20rem; 
+  height: 20rem; 
+  position: absolute; 
+  bottom: -10rem;
+  left: 22rem; 
+  display: none;
+}
+
+#saxo{
+  width: 10rem; 
+  height: 10rem; 
+  position: absolute; 
+  bottom: 0rem; 
+  right: 27rem;
+  display: none;
+}
+
+.delay1 {
+  animation-delay: 1s;
+}
+
+.delay2 {
+  animation-delay: 2s;
 }
 
 #blackout_text {
