@@ -44,6 +44,27 @@ body {
   flex-direction: column;
 }
 
+.kort6{
+  position: absolute;
+  right: 8.7rem;
+  width: 25rem;
+  height: 5rem;
+}
+
+.kort12{
+  position: absolute;
+  right: 9.7rem;
+  width: 25rem;
+  height: 5rem;
+}
+
+.kort18{
+  position: absolute;
+  right: 11.3rem;
+  width: 25rem;
+  height: 5rem;
+}
+
 h1,
 h2 {
   font-family: sans-serif;
