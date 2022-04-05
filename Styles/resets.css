@@ -14,8 +14,8 @@ body {
   height: 100%;
   overflow: hidden;
   width: 100%;
-  background-color: #eaeaea;
-  background-image: url(vendekort_bg.png);
+  background: #eaeaea url(vendekort_bg_250.png) no-repeat;
+  background-size: cover;
 }
 
 .hideall * {

@@ -66,23 +66,27 @@ body {
   -webkit-transform: scale(1);
   -webkit-transform-style: preserve-3d;
   -webkit-transition: transform 0.5s;
+  animation-duration: 0ms;
 }
 
 .Vende-kort:active {
-  transform: scale(0.97);
+  transform: scale(1);
   transition: transform 0.2s;
-  -webkit-transform: scale(0.97);
+  -webkit-transform: scale(1);
   -webkit-transition: transform 0.2s;
+  animation-duration: 0ms;
 }
 
 .Vende-kort.vend {
   transform: rotateY(180deg);
   -webkit-transform-origin-y: 180deg;
+  animation-duration: 0ms;
 }
 
 .Vende-kort.match {
   transform: scale(1.25);
   -webkit-transform: scale(1.25);
+  animation-duration: 0ms;
 }
 
 .Vende-kort.rotate{
@@ -127,11 +131,13 @@ body {
   height: 100%;
   border-radius: 5px;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .forside-kort {
   transform: rotateY(180deg);
   -webkit-transform-origin-y: 180deg;
+  animation-duration: 0ms;
 }
 
 h1 {
